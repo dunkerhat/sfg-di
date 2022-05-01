@@ -1,4 +1,4 @@
-package com.springframework.pets;
+package cappe.springframework.pets;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

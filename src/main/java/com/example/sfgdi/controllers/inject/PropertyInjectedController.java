@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 public class PropertyInjectedController {
 
     @Autowired
-    @Qualifier("propertyGreetingServicImpl")
+    @Qualifier("propertyGreetingServiceImpl")
     public GreetingService greetingService;
 
     public String getGreetings() {
