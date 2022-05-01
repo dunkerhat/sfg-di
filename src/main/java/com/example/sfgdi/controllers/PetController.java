@@ -1,6 +1,6 @@
-package com.example.sfgdi.controller.pet;
+package com.example.sfgdi.controllers;
 
-import com.example.sfgdi.service.pet.PetService;
+import com.springframework.pets.PetService;
 import org.springframework.stereotype.Controller;
 
 @Controller

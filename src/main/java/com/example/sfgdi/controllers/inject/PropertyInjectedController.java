@@ -1,4 +1,4 @@
-package com.example.sfgdi.controller.inject;
+package com.example.sfgdi.controllers.inject;
 
 import com.example.sfgdi.service.greetings.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ public class PropertyInjectedController {
     @Qualifier("propertyGreetingServicImpl")
     public GreetingService greetingService;
 
-    public String getGreetings(){
+    public String getGreetings() {
         return greetingService.sayGreeting();
     }
 }

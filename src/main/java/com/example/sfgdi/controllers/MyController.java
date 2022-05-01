@@ -1,4 +1,4 @@
-package com.example.sfgdi.controller;
+package com.example.sfgdi.controllers;
 
 import com.example.sfgdi.service.greetings.GreetingService;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ public class MyController {
         this.greetingService = greetingService;
     }
 
-    public String sayHello(){
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
 }

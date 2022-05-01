@@ -1,20 +1,23 @@
-package com.example.sfgdi;
+package com.example;
 
-import com.example.sfgdi.controller.*;
-import com.example.sfgdi.controller.inject.ConstructorInjectedController;
-import com.example.sfgdi.controller.inject.PropertyInjectedController;
-import com.example.sfgdi.controller.inject.SetterInjectedController;
-import com.example.sfgdi.controller.pet.PetController;
+import com.example.sfgdi.controllers.I18nController;
+import com.example.sfgdi.controllers.MyController;
+import com.example.sfgdi.controllers.inject.ConstructorInjectedController;
+import com.example.sfgdi.controllers.inject.PropertyInjectedController;
+import com.example.sfgdi.controllers.inject.SetterInjectedController;
+import com.example.sfgdi.controllers.PetController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan({"com.springframework.pets", "com.example.sfgdi"})
 public class SfgDiApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
-        MyController myController = (MyController) ctx.getBean(MyController.class);
+        MyController myController = ctx.getBean(MyController.class);
 
         PetController petController = ctx.getBean("petController", PetController.class);
         System.out.println(petController.whichPetIsBest());

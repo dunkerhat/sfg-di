@@ -1,4 +1,4 @@
-package com.example.sfgdi;
+package com.example;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;

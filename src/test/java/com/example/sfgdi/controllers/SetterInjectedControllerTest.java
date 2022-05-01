@@ -1,6 +1,6 @@
-package com.example.sfgdi.controller;
+package com.example.sfgdi.controllers;
 
-import com.example.sfgdi.controller.inject.SetterInjectedController;
+import com.example.sfgdi.controllers.inject.SetterInjectedController;
 import com.example.sfgdi.service.greetings.ConstructorGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

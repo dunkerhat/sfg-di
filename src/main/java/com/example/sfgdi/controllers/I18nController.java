@@ -1,4 +1,4 @@
-package com.example.sfgdi.controller;
+package com.example.sfgdi.controllers;
 
 import com.example.sfgdi.service.greetings.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +12,7 @@ public class I18nController {
         this.greetingService = greetingService;
     }
 
-    public String sayHello(){
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
 }
