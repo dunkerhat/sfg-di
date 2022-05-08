@@ -10,12 +10,10 @@ import com.example.sfgdi.service.greetings.ConstructorGreetingServiceImpl;
 import com.example.sfgdi.service.greetings.PrimaryGreetingService;
 import com.example.sfgdi.service.greetings.PropertyGreetingServicImpl;
 import com.example.sfgdi.service.greetings.SetterGreetingServiceImpl;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@ImportResource("classpath:di-config.xml")
 public class GreetingServiceConfig {
 
     @Bean
@@ -59,7 +57,7 @@ public class GreetingServiceConfig {
         return new PrimaryGreetingService();
     }
 
-    @Bean
+//    @Bean
     public ConstructorGreetingServiceImpl constructorGreetingServiceImpl(){
         return new ConstructorGreetingServiceImpl();
     }

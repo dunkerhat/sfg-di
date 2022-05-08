@@ -12,9 +12,11 @@ import javax.annotation.PreDestroy;
 
 @Component
 public class LifecycleDemoBean implements
-        InitializingBean, DisposableBean,
+        InitializingBean,
+        DisposableBean,
         ApplicationContextAware,
-        BeanNameAware, BeanFactoryAware {
+        BeanNameAware,
+        BeanFactoryAware {
 
     public LifecycleDemoBean() {
         System.out.println("## I'm the LifecyleDemoBean constructor");
